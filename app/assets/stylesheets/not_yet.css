@@ -1,4 +1,14 @@
+body{
+	background-color: blue
+}
+
 .clock {
 	margin-left: 33%;
-    margin-right: 33%
+    margin-right: 33%;
+    margin-top: 15%
+}
+.instructions{
+	margin-left: 15%;
+    margin-right: 15%;
+    color: #88F
 }
