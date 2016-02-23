@@ -5,7 +5,8 @@ class DadController < ApplicationController
 		# if Time.now.to_s < "2016-02-25 13:33:25 -0500"
 			render :not_yet
 		else
-			redirect_to :start and return
+			# @question = Question.find_by(number: "1")
+			redirect_to questions_path({number: 1})
 		end
 	end
 

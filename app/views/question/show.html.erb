@@ -2,6 +2,10 @@
 
 <h3>To begin, let's confirm your identity.</h3>
 
-<%= binding.pry %>
-
 <%= "#{@question.number}, #{@question.text}, #{@question.answer}" %>
+
+<%= form_tag('/questions') %>
+	<%= hidden_field_tag 'number', "#{@question.number}" %>
+	<%= label_tag 'answer', "#{@question.text}" %>
+	<%= text_field_tag 'answer' %>
+	<%= submit_tag "Submit" %>
