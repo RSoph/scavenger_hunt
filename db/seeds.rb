@@ -7,13 +7,13 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 hash = {
-		1 => ['text of question 1', 'answer 1'],
-		2 => ['text of question 2', 'answer 2'],
-		3 => ['text of question 3', 'answer 3'],
-		4 => ['text of question 4', 'answer 4'],
-		5 => ['text of question 5', 'answer 5'],
-		6 => ['text of question 6', 'answer 6'],
-		7 => ['text of question 7', 'answer 7']
+		1 => ['What is your middle name?', 'elliot'],
+		2 => ['What year were you born?', '1946'],
+		3 => ["Wow, that means you're 70 this year! How many prime factors does 70 have?", '3'],
+		4 => ["Yep, you're definitely Mel. Just to double check, in what year did you get married?", '1981'],
+		5 => ['...and in what year did you first become a Dad?', '1984'],
+		6 => ['...and the second time you became a Dad?', '1986'],
+		7 => ["That's quite a lot of living! Tell me, in all that time have you ever lived outside of NYC?", 'no']
 		}
 
 hash.each do |k, v|
