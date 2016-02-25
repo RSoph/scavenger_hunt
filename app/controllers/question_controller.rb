@@ -12,8 +12,9 @@ class QuestionController < ApplicationController
 			else
 				flash[:notice] = "Oops, try again!"
 			end
+		else
+			number = 1
 		end
-		number ||= 1
 		@question = Question.find_by(number: number)
 	end
 
