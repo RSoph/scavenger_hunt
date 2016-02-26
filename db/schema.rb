@@ -13,6 +13,19 @@
 
 ActiveRecord::Schema.define(version: 20160222183111) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "numbers", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "number"
+    t.integer  "count"
+  end
+
+  create_table "numbers_tables", force: :cascade do |t|
+  end
+
   create_table "questions", force: :cascade do |t|
     t.integer  "number"
     t.text     "text"
