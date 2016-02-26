@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'dad#index'
+  root 'home#index'
 
   get '/dad' => 'dad#index'
   get '/questions' => 'question#show'
