@@ -17,4 +17,4 @@
 /tmp
 
 # Ignore secretss
-# config/secrets.yml
+config/secrets.yml

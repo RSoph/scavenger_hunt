@@ -46,20 +46,22 @@ class TextController < ApplicationController
 			)
 		end
 
+		@tracker = (Tracker.first || Tracker.create({"number" => 0}))
+
 		if body == 'hunt'
-			message(from_number, "Welcome! Remember, you always can text 'hint' for a hint on your current question.")
-			question_number = 0
-			sleep(3)
-	  		message(from_number, @question[question_number])
-	  		message('7187535492', "texted question number #{(question_number.to_i + 1).to_s}")
+			message(from_number, "Welcome! Remember, you can always text 'hint' for a hint on your current question.")
+	  		message(from_number, @question[@tracker.number])
 	  	elsif body == 'hint'
-			message(from_number, @hint[question_number])
-		elsif body == @answer[question_number]
-			question_number += 1
-			message(from_number, @question[question_number])
-			message('7187535492', "texted question number #{(question_number.to_i + 1).to_s}")
+			message(from_number, @hint[@tracker.number])
+		elsif body == @answer[@tracker.number]
+			@tracker.number += 1
+			@tracker.save!
+			message(from_number, @question[@tracker.number])
 		else
 			message(from_number, @error[0])
+		end
+		if @tracker.number == 7
+			@tracker.destroy
 		end
 		render nothing: true
 	end
