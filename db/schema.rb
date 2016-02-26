@@ -12,6 +12,12 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 20160226015626) do
+<<<<<<< HEAD
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+=======
+>>>>>>> 77e7566... instance variables won't work here, adding a tracker
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +31,15 @@ ActiveRecord::Schema.define(version: 20160226015626) do
   end
 
   create_table "trackers", force: :cascade do |t|
+<<<<<<< HEAD
+<<<<<<< HEAD
     t.integer "count"
+=======
+    t.integer "number"
+>>>>>>> 77e7566... instance variables won't work here, adding a tracker
+=======
+    t.integer "count"
+>>>>>>> 2c6170b... tweaking how tracker works
   end
 
 end
