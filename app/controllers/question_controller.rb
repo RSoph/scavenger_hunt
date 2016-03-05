@@ -6,7 +6,7 @@ class QuestionController < ApplicationController
 			@question = Question.find_by(number: number)
 			if params[:answer] && (params[:answer].downcase.strip == @question.answer)
 				number += 1
-				if number == 8
+				if number == 13
 					render :last and return
 				end
 			else
